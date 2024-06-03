@@ -1,3 +1,5 @@
+---
+
 ### Python 3 Keywords (35)
 
 1. **False**: A boolean value representing "false" in Python.
@@ -891,9 +893,7 @@ print("Divide and assign:", x)  # Output: 6.0
 
 # Divide and assign (integer)
 x //= 2
-print("Divide and assign
-
- (integer):", x)  # Output: 3.0
+print("Divide and assign (integer):", x)  # Output: 3.0
 
 # Modulus and assign
 x %= 2
@@ -1087,3 +1087,5 @@ print("Is it raining?", is_raining)
 result = None
 print("Result:", result)
 ```
+
+---
