@@ -39,7 +39,6 @@
 35. **yield**: Used inside a generator function to produce a value to be iterated over.
 
 ### Example Usage of Keywords
-
 #### False, True, and None
 ```python
 # Boolean values
