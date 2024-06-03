@@ -1,5 +1,3 @@
----
-
 ### Python 3 Keywords (35)
 
 1. **False**: A boolean value representing "false" in Python.
@@ -1087,5 +1085,3 @@ print("Is it raining?", is_raining)
 result = None
 print("Result:", result)
 ```
-
----
