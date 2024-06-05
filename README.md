@@ -1,273 +1,294 @@
-### Python 3 Keywords (35)
+---
+### Python 3 Keywords and Example Usage
 
-1. **False**: A boolean value representing "false" in Python.
-2. **None**: A special value representing the absence of a value or "null".
-3. **True**: A boolean value representing "true" in Python.
-4. **and**: A logical operator used to combine two conditions, both of which must be true for the overall condition to be true.
-5. **as**: Used in the context of importing modules to give them an alias (alternate name) for easier use.
-6. **assert**: Used for debugging to check if a condition is true and raises an error if it's false.
-7. **async**: Used to define a coroutine function, which allows for asynchronous programming (introduced in Python 3.5).
-8. **await**: Used inside an asynchronous function to pause its execution until the awaited coroutine completes (introduced in Python 3.5).
-9. **break**: Used to exit out of a loop prematurely.
-10. **class**: Used to define a new class, which is a blueprint for creating objects.
-11. **continue**: Used to skip the rest of the current loop iteration and move to the next one.
-12. **def**: Used to define a new function.
-13. **del**: Used to remove a variable or an element from a list or dictionary.
-14. **elif**: Short for "else if," used in conditional statements to check additional conditions.
-15. **else**: Used in conditional statements to define what happens when the previous conditions are not met.
-16. **except**: Used in exception handling to specify a block of code that will be executed if an exception occurs.
-17. **finally**: Used in exception handling to specify a block of code that will always be executed, whether an exception occurs or not.
-18. **for**: Used to iterate over elements in a sequence (e.g., list, tuple, string) or other iterable objects.
-19. **from**: Used in the context of importing to specify the module or package from which you want to import.
-20. **global**: Used inside a function to indicate that a variable declared within the function should refer to the global scope.
-21. **if**: Used to define a conditional statement that executes a block of code if a certain condition is true.
-22. **import**: Used to import modules or specific objects from modules.
-23. **in**: Used to check if a value is present in a sequence (e.g., list, tuple, string) or other iterable objects.
-24. **is**: Used to check if two objects refer to the same memory location.
-25. **lambda**: Used to create anonymous functions (functions without a name).
-26. **nonlocal**: Used inside a nested function to indicate that a variable should refer to the nearest enclosing scope outside of the global scope.
-27. **not**: A logical operator used to negate a condition.
-28. **or**: A logical operator used to combine two conditions, at least one of which must be true for the overall condition to be true.
-29. **pass**: A placeholder statement that does nothing. It's used when a statement is syntactically required but you don't want any action.
-30. **raise**: Used to raise an exception manually.
-31. **return**: Used to return a value from a function.
-32. **try**: Used to enclose a block of code that might raise an exception. It is followed by `except` and/or `finally`.
-33. **while**: Used to create a loop that executes as long as a certain condition is true.
-34. **with**: Used to define a context for objects that support the context management protocol (e.g., files opened with `open()`).
-35. **yield**: Used inside a generator function to produce a value to be iterated over.
-
-### Example Usage of Keywords
-
-#### False, True, and None
+#### 1. **False**
 ```python
-# Boolean values
-is_sunny = True
-is_raining = False
-
-# None - represents the absence of a value
-result = None
+is_sunny = False
+print(is_sunny)  # Output: False
 ```
 
-#### and, or, and not
+#### 2. **None**
+```python
+result = None
+print(result)  # Output: None
+```
+
+#### 3. **True**
+```python
+is_sunny = True
+print(is_sunny)  # Output: True
+```
+
+#### 4. **and**
 ```python
 x = 10
 y = 5
-
-# Logical AND - both conditions must be true
 if x > 5 and y < 10:
-    print("Both conditions are true.")
-
-# Logical OR - at least one condition must be true
-if x > 10 or y > 10:
-    print("At least one condition is true.")
-
-# Logical NOT - negates the condition
-if not x == y:
-    print("x is not equal to y.")
+    print("Both conditions are true.")  # Output: Both conditions are true.
 ```
 
-#### if, elif, and else
+#### 5. **as**
 ```python
-age = 25
-
-if age < 18:
-    print("You are a minor.")
-elif age >= 18 and age < 65:
-    print("You are an adult.")
-else:
-    print("You are a senior citizen.")
-```
-
-#### while and break
-```python
-count = 0
-
-while count < 5:
-    print("Count:", count)
-    count += 1
-    if count == 3:
-        break
-```
-
-#### for and continue
-```python
-numbers = [1, 2, 3, 4, 5]
-
-for num in numbers:
-    if num == 3:
-        continue  # Skip the number 3
-    print("Number:", num)
-```
-
-#### def and return
-```python
-def add_numbers(a, b):
-    result = a + b
-    return result
-
-sum_result = add_numbers(10, 20)
-print("Sum:", sum_result)
-```
-
-#### try, except, and finally
-```python
-try:
-    num = int(input("Enter a number: "))
-    result = 10 / num
-    print("Result:", result)
-except ValueError:
-    print("Invalid input. Please enter a valid number.")
-except ZeroDivisionError:
-    print("Cannot divide by zero.")
-finally:
-    print("Execution completed.")
-```
-
-#### assert
-```python
-age = 15
-assert age >= 18, "You must be 18 years or older to access this content."
-print("Access granted.")
-```
-
-#### import and from
-```python
-# Importing entire module
-import math
-print("Square root of 16:", math.sqrt(16))
-
-# Importing specific function from a module
-from random import randint
-random_num = randint(1, 100)
-print("Random number:", random_num)
-```
-
-#### as
-```python
-# Giving a module an alias for shorter reference
 import datetime as dt
 current_date = dt.date.today()
-print("Current date:", current_date)
+print(current_date)
 ```
 
-#### lambda
+#### 6. **assert**
 ```python
-# Using lambda to create an anonymous function
-add = lambda x, y: x + y
-result = add(5, 3)
-print("Result:", result)
+age = 25
+assert age >= 18, "Age must be at least 18."
 ```
 
-#### global
-```python
-# Modifying a global variable from within a function
-count = 0
-
-def increment():
-    global count
-    count += 1
-
-increment()
-print("Count:", count)  # Output: 1
-```
-
-#### del
-```python
-# Deleting a variable
-name = "Alice"
-print("Hello,", name)
-
-del name
-
-# The variable 'name' no longer exists
-print("Hello,", name)  # Raises NameError: name 'name' is not defined
-```
-
-#### yield
-```python
-# Using a generator function with yield
-def countdown(n):
-    while n > 0:
-        yield n
-        n -= 1
-
-for num in countdown(5):
-    print(num, end=' ')  # Output: 5 4 3 2 1
-```
-
-#### async and await (requires Python 3.5+)
+#### 7. **async** (Python 3.5+)
 ```python
 import asyncio
 
-async def hello():
+async def main():
+    print('Hello ...')
     await asyncio.sleep(1)
-    print("Hello, asyncio!")
+    print('... World!')
 
-asyncio.run(hello())
+asyncio.run(main())
 ```
 
-#### nonlocal
+#### 8. **await** (Python 3.5+)
 ```python
-def outer_function():
-    x = "outer"
+import asyncio
 
-    def inner_function():
+async def say_hello():
+    await asyncio.sleep(1)
+    print("Hello")
+
+asyncio.run(say_hello())
+```
+
+#### 9. **break**
+```python
+for i in range(5):
+    if i == 3:
+        break
+    print(i)  # Output: 0 1 2
+```
+
+#### 10. **class**
+```python
+class MyClass:
+    def __init__(self, name):
+        self.name = name
+
+obj = MyClass("Python")
+print(obj.name)  # Output: Python
+```
+
+#### 11. **continue**
+```python
+for i in range(5):
+    if i == 3:
+        continue
+    print(i)  # Output: 0 1 2 4
+```
+
+#### 12. **def**
+```python
+def greet():
+    print("Hello, World!")
+
+greet()
+```
+
+#### 13. **del**
+```python
+x = [1, 2, 3]
+del x[1]
+print(x)  # Output: [1, 3]
+```
+
+#### 14. **elif**
+```python
+x = 5
+if x > 10:
+    print("Greater than 10")
+elif x > 5:
+    print("Greater than 5")
+else:
+    print("5 or less")  # Output: 5 or less
+```
+
+#### 15. **else**
+```python
+x = 5
+if x > 10:
+    print("Greater than 10")
+else:
+    print("10 or less")  # Output: 10 or less
+```
+
+#### 16. **except**
+```python
+try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")  # Output: Cannot divide by zero
+```
+
+#### 17. **finally**
+```python
+try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+finally:
+    print("This is executed no matter what")  # Output: This is executed no matter what
+```
+
+#### 18. **for**
+```python
+for i in range(3):
+    print(i)  # Output: 0 1 2
+```
+
+#### 19. **from**
+```python
+from math import sqrt
+print(sqrt(16))  # Output: 4.0
+```
+
+#### 20. **global**
+```python
+x = 5
+def set_global_x():
+    global x
+    x = 10
+
+set_global_x()
+print(x)  # Output: 10
+```
+
+#### 21. **if**
+```python
+x = 5
+if x > 0:
+    print("Positive number")  # Output: Positive number
+```
+
+#### 22. **import**
+```python
+import math
+print(math.pi)  # Output: 3.141592653589793
+```
+
+#### 23. **in**
+```python
+fruits = ["apple", "banana", "cherry"]
+if "banana" in fruits:
+    print("Banana is in the list")  # Output: Banana is in the list
+```
+
+#### 24. **is**
+```python
+x = [1, 2, 3]
+y = x
+print(x is y)  # Output: True
+```
+
+#### 25. **lambda**
+```python
+add = lambda a, b: a + b
+print(add(2, 3))  # Output: 5
+```
+
+#### 26. **nonlocal**
+```python
+def outer():
+    x = "outer"
+    def inner():
         nonlocal x
         x = "inner"
+    inner()
+    print(x)  # Output: inner
 
-    inner_function()
-    print("x inside outer_function:", x)
-
-outer_function()
+outer()
 ```
 
-#### pass
+#### 27. **not**
 ```python
-# Using pass as a placeholder for empty code blocks
-def some_function():
-    # TODO: Implement this function later
+x = False
+if not x:
+    print("x is False")  # Output: x is False
+```
+
+#### 28. **or**
+```python
+x = 5
+y = 10
+if x > 0 or y > 0:
+    print("At least one is positive")  # Output: At least one is positive
+```
+
+#### 29. **pass**
+```python
+def func():
     pass
 ```
 
-#### in
+#### 30. **raise**
 ```python
-# Checking if an element exists in a list
-fruits = ["apple", "banana", "orange"]
+def check_positive(x):
+    if x < 0:
+        raise ValueError("x must be positive")
+    return x
 
-if "banana" in fruits:
-    print("Yes, 'banana' is in the list.")
+check_positive(-1)
 ```
 
-#### is
+#### 31. **return**
 ```python
-# Comparing object identities
-x = [1, 2, 3]
-y = [1, 2, 3]
+def add(a, b):
+    return a + b
 
-if x is y:
-    print("x and y refer to the same object.")
-else:
-    print("x and y refer to different objects.")
+print(add(2, 3))  # Output: 5
 ```
 
-#### try, except, else, and finally (together)
+#### 32. **try**
 ```python
 try:
-    num = int(input("Enter a number: "))
+    x = int("invalid")
 except ValueError:
-    print("Invalid input. Please enter a valid number.")
-else:
-    result = 10 / num
-    print("Result:", result)
-finally:
-    print("Execution completed.")
+    print("Invalid value")  # Output: Invalid value
+```
+
+#### 33. **while**
+```python
+i = 0
+while i < 3:
+    print(i)  # Output: 0 1 2
+    i += 1
+```
+
+#### 34. **with**
+```python
+with open("test.txt", "w") as file:
+    file.write("Hello, World!")
+```
+
+#### 35. **yield**
+```python
+def generator():
+    yield 1
+    yield 2
+    yield 3
+
+for value in generator():
+    print(value)  # Output: 1 2 3
 ```
 
 ---
 
-### Python Built-in Functions
+### Python Built-in Functions and Example Usage
 
-#### 1. Type Conversion Functions:
+#### Type Conversion Functions
+
 - **int()**
 ```python
 num_str = "42"
@@ -283,9 +304,7 @@ print(num_float)  # Output: 3.14
 ```
 
 - **str()**
-```
-
-python
+```python
 num_int = 42
 num_str = str(num_int)
 print(num_str)  # Output: "42"
@@ -345,7 +364,8 @@ char_code = ord('A')
 print(char_code)  # Output: 65
 ```
 
-#### 2. Mathematical Functions:
+#### Mathematical Functions
+
 - **abs()**
 ```python
 abs_value = abs(-5)
@@ -366,7 +386,9 @@ print(result)  # Output: 8
 
 - **max()**
 ```python
-max_num = max(1, 5, 3)
+max_num = max(1
+
+, 5, 3)
 print(max_num)  # Output: 5
 ```
 
@@ -389,7 +411,8 @@ quotient, remainder = divmod(10, 3)
 print(quotient, remainder)  # Output: 3 1
 ```
 
-#### 3. Iterable Functions:
+#### Iterable Functions
+
 - **len()**
 ```python
 str_len = len("Hello")
@@ -451,15 +474,21 @@ values = [False, False, True]
 print(any(values))  # Output: True (since one value is True)
 ```
 
-#### 4. Input/Output Functions:
-- **print()**: Already demonstrated in previous examples.
+#### Input/Output Functions
+
+- **print()**
+```python
+print("Hello, World!")
+```
+
 - **input()**
 ```python
 name = input("Enter your name: ")
 print("Hello, " + name)
 ```
 
-#### 5. Object Type Functions:
+#### Object Type Functions
+
 - **type()**
 ```python
 x = 5
@@ -478,11 +507,33 @@ x = 5
 print(isinstance(x, int))  # Output: True
 ```
 
-#### 6. String Functions:
-- **str()**: Already demonstrated in previous examples.
-- **len()**: Already demonstrated in previous examples.
-- **ord()**: Already demonstrated in previous examples.
-- **chr()**: Already demonstrated in previous examples.
+#### String Functions
+
+- **str()**
+```python
+num_int = 42
+num_str = str(num_int)
+print(num_str)  # Output: "42"
+```
+
+- **len()**
+```python
+str_len = len("Hello")
+print(str_len)  # Output: 5
+```
+
+- **ord()**
+```python
+char_code = ord('A')
+print(char_code)  # Output: 65
+```
+
+- **chr()**
+```python
+char_code = chr(65)
+print(char_code)  # Output: 'A'
+```
+
 - **capitalize()**
 ```python
 text = "hello, world"
@@ -534,12 +585,40 @@ print(formatted_text)
 # Output: "My name is John and I am 30 years old."
 ```
 
-#### 7. List Functions:
-- **list()**: Already demonstrated in previous examples.
-- **len()**: Already demonstrated in previous examples.
-- **max()**: Already demonstrated in previous examples.
-- **min()**: Already demonstrated in previous examples.
-- **sum()**: Already demonstrated in previous examples.
+#### List Functions
+
+- **list()**
+```python
+num_tuple = (1, 2, 3)
+num_list = list(num_tuple)
+print(num_list)  # Output: [1, 2, 3]
+```
+
+- **len()**
+```python
+str_len = len("Hello")
+print(str_len)  # Output: 5
+```
+
+- **max()**
+```python
+max_num = max([1, 2, 3, 4, 5])
+print(max_num)  # Output: 5
+```
+
+- **min()**
+```python
+min_num = min([1, 2, 3, 4, 5])
+print(min_num)  # Output: 1
+```
+
+- **sum()**
+```python
+numbers = [1, 2, 3, 4, 5]
+sum_result = sum(numbers)
+print(sum_result)  # Output: 15
+```
+
 - **append()**
 ```python
 numbers = [1, 2, 3]
@@ -598,14 +677,40 @@ numbers.reverse()
 print(numbers)  # Output: [5, 4, 3, 2, 1]
 ```
 
-#### 8. Tuple Functions:
-- **tuple()**
+#### Tuple Functions
 
-: Already demonstrated in previous examples.
-- **len()**: Already demonstrated in previous examples.
-- **max()**: Already demonstrated in previous examples.
-- **min()**: Already demonstrated in previous examples.
-- **sum()**: Already demonstrated in previous examples.
+- **tuple()**
+```python
+num_list = [1, 2, 3]
+num_tuple = tuple(num_list)
+print(num_tuple)  # Output: (1, 2, 3)
+```
+
+- **len()**
+```python
+str_len = len("Hello")
+print(str_len)  # Output: 5
+```
+
+- **max()**
+```python
+max_num = max((1, 2, 3, 4, 5))
+print(max_num)  # Output: 5
+```
+
+- **min()**
+```python
+min_num = min((1, 2, 3, 4, 5))
+print(min_num)  # Output: 1
+```
+
+- **sum()**
+```python
+numbers = (1, 2, 3, 4, 5)
+sum_result = sum(numbers)
+print(sum_result)  # Output: 15
+```
+
 - **count()**
 ```python
 numbers = (1, 2, 2, 3, 3, 3)
@@ -617,12 +722,26 @@ print(count_2)  # Output: 2
 ```python
 numbers = (1, 2, 3, 4, 5)
 index_3 = numbers.index(3)
-print(index_3)  # Output: 2 (index of the first occurrence of 3)
+print(index_3)  # Output: 2 (index of the first occurrence
+
+ of 3)
 ```
 
-#### 9. Dictionary Functions:
-- **dict()**: Already demonstrated in previous examples.
-- **len()**: Already demonstrated in previous examples.
+#### Dictionary Functions
+
+- **dict()**
+```python
+pairs = [("a", 1), ("b", 2), ("c", 3)]
+num_dict = dict(pairs)
+print(num_dict)  # Output: {'a': 1, 'b': 2, 'c': 3}
+```
+
+- **len()**
+```python
+str_len = len("Hello")
+print(str_len)  # Output: 5
+```
+
 - **keys()**
 ```python
 person = {'name': 'John', 'age': 30, 'city': 'New York'}
@@ -680,9 +799,21 @@ person.clear()
 print(person)  # Output: {}
 ```
 
-#### 10. Set Functions:
-- **set()**: Already demonstrated in previous examples.
-- **len()**: Already demonstrated in previous examples.
+#### Set Functions
+
+- **set()**
+```python
+num_list = [1, 2, 2, 3, 3, 3]
+num_set = set(num_list)
+print(num_set)  # Output: {1, 2, 3}
+```
+
+- **len()**
+```python
+str_len = len("Hello")
+print(str_len)  # Output: 5
+```
+
 - **add()**
 ```python
 fruits = {'apple', 'banana', 'orange'}
@@ -758,20 +889,60 @@ is_superset = set1.issuperset(set2)
 print(is_superset)  # Output: True
 ```
 
-#### 11. Miscellaneous Functions:
-- **input()**: Already demonstrated in previous examples.
-- **abs()**: Already demonstrated in previous examples.
-- **pow()**: Already demonstrated in previous examples.
+#### Miscellaneous Functions
+
+- **input()**
+```python
+name = input("Enter your name: ")
+print("Hello, " + name)
+```
+
+- **abs()**
+```python
+abs_value = abs(-5)
+print(abs_value)  # Output: 5
+```
+
+- **pow()**
+```python
+result = pow(2, 3)
+print(result)  # Output: 8
+```
+
 - **open()**
 ```python
 with open("myfile.txt", "w") as file:
     file.write("Hello, World!")
 ```
 
-- **sorted()**: Already demonstrated in previous examples.
-- **range()**: Already demonstrated in previous examples.
-- **id()**: Already demonstrated in previous examples.
-- **format()**: Already demonstrated in previous examples.
+- **sorted()**
+```python
+numbers = [3, 1, 4, 1, 5, 9, 2]
+sorted_numbers = sorted(numbers)
+print(sorted_numbers)  # Output: [1, 1, 2, 3, 4, 5, 9]
+```
+
+- **range()**
+```python
+numbers = list(range(1, 6))
+print(numbers)  # Output: [1, 2, 3, 4, 5]
+```
+
+- **id()**
+```python
+x = 5
+print(id(x))  # Output: (some memory address)
+```
+
+- **format()**
+```python
+name = "John"
+age = 30
+formatted_text = "My name is {} and I am {} years old.".format(name, age)
+print(formatted_text)
+# Output: "My name is John and I am 30 years old."
+```
+
 - **help()**
 ```python
 help(list)
@@ -864,7 +1035,9 @@ print("Division (integer):", result)  # Output: 1
 result = a % b
 print("Modulus:", result)  # Output: 2
 
-# Exponentiation
+# Exponent
+
+iation
 result = a ** b
 print("Exponentiation:", result)  # Output: 125
 ```
@@ -1085,3 +1258,4 @@ print("Is it raining?", is_raining)
 result = None
 print("Result:", result)
 ```
+---
